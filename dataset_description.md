@@ -48,13 +48,15 @@ Counts after preparation (seed 20261009): about **800 train / 400 test** (exact 
 ## Known limitations
 
 - Domain is short English synthetic minutes; transfer to real corporate minutes is not guaranteed
-- Template language leaves residual lexical cues; family holdout mainly shifts openers / speaker chrome
-- Classic decision verbs (`approved` / `deferred` / …) appear in traps; gold uses soft marks (`assent` / `park` / `denial` / `information-only`) and soft-mark traps also appear in drafts/mocks
-- Card-block order (decision / due / owner) is shuffled per row
+- Stamp tokens are desk/family-local; decoy mark-key tables are planted alongside a binding key
+- Twin surviving stamps share mark text; only the card-region occurrence is the graded `decision_span` (exact offsets)
+- Policy-override lines can change the graded status; draft/superseded override wording must be ignored
+- ~18% of rows have residual status-annotator disagreement with no extra textual cue (soft ceiling)
 - Owner spans for `unassigned` use a document-start anchor convention
 - Random name pools may collide across rows; ids remain the only join key
-- Post-decision corridor chatter may re-mention a distractor subject
 
 ## Source attribution
 
-Synthetic data generated for this challenge (`generate_raw.py`). No upstream corpus.
+Synthetic data generated offline for this challenge. Generator scripts are **not** part of the agent-facing package.
+
+Source repository: https://github.com/firo-moh7/board-action-slots

@@ -1,13 +1,9 @@
 # Board Action Card (`board_action_slots`)
 
-Synthetic meeting-minute **action card** dataset for an Eris / Shipd NLP challenge.
+Synthetic meeting-minute **action card** slot-filling dataset (CC0-1.0).
 
-- **License:** [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) (public domain dedication)
-- **Generator:** `generate_raw.py` (deterministic, seed `20261009`)
-- **Task:** decision status + owner + due bucket + subject + provenance spans under discussion distractors
+- **License:** [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Task:** decision status + owner + due + subject + provenance spans under adversarial distractors
+- Prepared splits are distributed via the Shipd/Eris challenge package (not regenerated here)
 
-```bash
-python3 generate_raw.py   # writes raw/minutes.csv
-```
-
-See `dataset_description.md` for provenance, limitations, and how this differs from DocIE / M&A deal-card extraction.
+This repository is the **attribution / license source URL** for the challenge.
